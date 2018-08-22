@@ -16,10 +16,6 @@ class timefile(object):
         if not os.path.exists(newfilepath):
             a = os.mkdir(newfilepath)
 
-#
-# if not os.path.exists(newfilepath):
-#     os.mkdir(newfilepath)
-
 filepath = timefile(nowtime)
 
 # print(filepath)
