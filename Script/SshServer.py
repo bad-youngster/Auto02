@@ -1,7 +1,8 @@
 # coding:utf-8
-import paramiko
+
 from Script.Operation import ScpConnt
 from Script.Operation import *
+
 
 
 host = '172.16.31.200'

@@ -1,6 +1,9 @@
 #coding:utf-8
-from Script.SshServer import *
+import paramiko
+from Script.SshServer import host,port,user,password
 from scp import SCPClient
+
+
 class ScpConnt(object):
     #初始化连接
     def __init__(self,host,user,password,port):
