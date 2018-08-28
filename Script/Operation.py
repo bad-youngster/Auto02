@@ -1,10 +1,12 @@
 #coding:utf-8
 import paramiko
-from Script.SshServer import host,port,user,password
+
 from scp import SCPClient
 
-
+host = '172.16.31.200'
 user = "root"
+password = "CentOS@123"
+port = 22
 
 class ScpConnt(object):
     #初始化连接
