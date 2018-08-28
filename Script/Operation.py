@@ -4,6 +4,8 @@ from Script.SshServer import host,port,user,password
 from scp import SCPClient
 
 
+user = "root"
+
 class ScpConnt(object):
     #初始化连接
     def __init__(self,host,user,password,port):
