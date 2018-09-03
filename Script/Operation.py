@@ -1,11 +1,14 @@
 #coding:utf-8
 import paramiko
+import os
 
 from scp import SCPClient
 
-host = '172.16.31.200'
+from Script.CreateTimeNameFile import nowtime
+
+host = '192.168.56.102'
 user = "root"
-password = "CentOS@123"
+password = "123456"
 port = 22
 
 class ScpConnt(object):
@@ -16,6 +19,7 @@ class ScpConnt(object):
         self.port = port
         self.user = user
         self.password = password
+        self.nowtime = nowtime
     #ssh连接
     def ssh_connection(self):
         try:
@@ -77,6 +81,13 @@ class ScpConnt(object):
             print("下载成功")
         except Exception as e:
             print("下载失败,请检查目录是否有权限!")
+
+    def createdirectory(self):
+        project_name = ["lypt","agent"]
+        for project_path in project_name:
+            newfilepath = ('/data/%s/%s' %(project_path,self.nowtime))
+            if not os.path.exists(newfilepath):
+                os.makedirs(newfilepath)
 
     #结束进程
     def close(self):

@@ -1,6 +1,7 @@
 # coding:utf-8
 
 from Script.Operation import connection
+# from Script.CreateTimeNameFile import timefile,nowtime
 
 
 
@@ -14,6 +15,7 @@ if __name__ == "__main__":
     '''
     getattr(connection,"ssh_connection")()
     while True:
+        # filepath = timefile(nowtime)
         print(massge)
         inp = input("action:>> ")
 

@@ -14,11 +14,11 @@ class timefile(object):
         newfilepath = self.nowtime
 
         if not os.path.exists(newfilepath):
-            a = os.mkdir(newfilepath)
+            os.mkdir('/data/%s'% newfilepath)
 
 filepath = timefile(nowtime)
 
 # print(filepath)
 
-if __name__ =="__main__":
-    filepath.timefilepath()
+# if __name__ =="__main__":
+#     filepath.timefilepath()

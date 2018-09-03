@@ -1,6 +1,6 @@
 #coding:utf-8
-import Script
-from Script.SshServer import connection
+
+from Script.Operation import connection
 
 if __name__ == '__main__':
     massge = '''
