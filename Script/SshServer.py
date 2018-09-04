@@ -11,6 +11,7 @@ if __name__ == "__main__":
     执行命令 >> 输入command
     上传文件 >> 输入put
     下载文件 >> 输入get
+    创建目录 >> 输入createdirectory
     退出 >> 输入quit\033[0m
     '''
     getattr(connection,"ssh_connection")()
