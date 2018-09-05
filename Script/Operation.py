@@ -5,6 +5,7 @@ import os
 from scp import SCPClient
 
 from Script.CreateTimeNameFile import nowtime
+from TEST_DEMO.insert_sql import db
 
 host = '192.168.56.102'
 user = "root"
@@ -84,8 +85,10 @@ class ScpConnt(object):
 
     def createdirectory(self):
         project_name = ["lypt","agent"]
+        cursor = db.cursor()
         for project_path in project_name:
             newfilepath = ('/data/%s/%s' %(project_path,self.nowtime))
+
             if not os.path.exists(newfilepath):
                 os.makedirs(newfilepath)
 

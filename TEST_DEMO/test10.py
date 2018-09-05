@@ -15,8 +15,6 @@ nowtime1 = time.strftime('%Y-%m-%d',time.localtime(time.time()))
 project_name = ["lypt", "agent"]
 
 
-
-
 db = pymysql.connect("192.168.56.102","root","123456","pymysql")
 cursor = db.cursor()
 for project_path in project_name:
@@ -28,14 +26,12 @@ for project_path in project_name:
         VALUES ('%s','%s','%s','%s','%s')"\
         % (host_name,host_ip,nowtime,create_user,newfilepath)
     print(sql1)
-    try:
+
+    # cursor.execute(sql1)
+    if not os.path.exists(newfilepath):
         cursor.execute(sql1)
-        if not os.path.exists(newfilepath):
-         os.makedirs(newfilepath)
+        os.makedirs(newfilepath)
         db.commit()
-    except Exception as e:
-        db.rollback()
-        print(e)
 db.close()
 
 
