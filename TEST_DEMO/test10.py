@@ -37,3 +37,6 @@ for project_path in project_name:
         db.rollback()
         print(e)
 db.close()
+
+
+
