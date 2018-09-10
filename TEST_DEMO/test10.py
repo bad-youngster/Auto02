@@ -11,7 +11,8 @@ host_ip = "192.168.56.102"
 nowtime = datetime.datetime.now()
 create_user = pwd.getpwuid(os.getegid())[0]
 
-nowtime1 = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+nowtime1 = time.strftime('%Y%m%d%H%M',time.localtime(time.time()))
+# print(nowtime1)
 project_name = ["lypt", "agent"]
 
 

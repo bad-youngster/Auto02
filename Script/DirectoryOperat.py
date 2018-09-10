@@ -6,8 +6,8 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-backupDir = "C:/Data/Project/Auto02/2018-08-07"
-bashDir = "C:/Data/Project/Auto02/2018-08-16"
+backupDir = "/tmp/lyptbak"
+bashDir = "/tmp/lypt"
 
 def copyFile(fromFile,toDir):
     if os.path.isdir(fromFile):
