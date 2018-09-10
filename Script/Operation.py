@@ -5,7 +5,7 @@ import os
 from scp import SCPClient
 
 from Script.CreateTimeNameFile import nowtime
-from TEST_DEMO.insert_sql import db
+from Db.insert_sql import db
 
 host = '192.168.56.102'
 user = "root"

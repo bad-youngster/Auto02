@@ -2,7 +2,7 @@
 import os
 import time
 
-from TEST_DEMO.insert_sql import cursor, sql1, db
+from Db.insert_sql import cursor, sql1, db
 
 nowtime = time.strftime('%Y-%m-%d',time.localtime(time.time()))
 
